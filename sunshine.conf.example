@@ -1,0 +1,21 @@
+# Copy to ~/.config/sunshine/sunshine.conf
+
+# Name the other computer will see in Moonlight
+sunshine_name = My Mac
+
+# Display ID of the virtual screen. The toggle script keeps it up to date,
+# any number works as a start.
+output_name = 2
+
+# Keep sound on the Mac instead of sending it to the monitor
+stream_audio = disabled
+
+# Show the picture only: the other computer's mouse and keyboard
+# must not control the Mac
+keyboard = disabled
+mouse = disabled
+controller = disabled
+
+# Optional: listen only on the Tailscale address (see README, "Gotchas").
+# Run `tailscale ip -4` to get yours.
+# bind_address = 100.x.y.z
