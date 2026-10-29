@@ -17,7 +17,11 @@ chmod +x "$SCRIPT"
 
 TMP="$(mktemp -d)"
 cat > "$TMP/toggle.applescript" <<EOF
-set r to do shell script quoted form of "$SCRIPT"
+try
+	set r to do shell script quoted form of "$SCRIPT"
+on error m
+	set r to m
+end try
 if r is "on" then
 	display notification "Open Moonlight on the other computer and pick this Mac" with title "$NAME is on"
 else if r is "off" then

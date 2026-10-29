@@ -36,7 +36,7 @@ raw = "[" + sys.stdin.read() + "]"
 for d in json.loads(raw):
     if d.get("name") == os.environ["SCREEN"]:
         print(d["displayID"])
-        break')
+        break' 2>/dev/null)
 if [ -z "$ID" ]; then
   "$CLI" set --name="$SCREEN" --connected=off >/dev/null 2>&1
   echo "no screen named \"$SCREEN\" in BetterDisplay"
